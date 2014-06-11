@@ -1,6 +1,9 @@
-senseData = open('pdsGuideRNAs_sense.tsv')
+from sys import argv
 
-antisenseData = open('pdsGuideRNAs_antisense.tsv')
+process, sensePath, antisensePath = argv
+
+senseData = open(sensePath)
+antisenseData = open(antisensePath)
 antisenseLines = antisenseData.readlines()
 
 def getStart(line):
